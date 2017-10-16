@@ -5,5 +5,8 @@ PDFLATEX=pdflatex
 
 all: pdf
 
-pdf:
+pdf: version
 	$(PDFLATEX) -interaction=errorstopmode -halt-on-error signhash-whitepaper.tex
+
+version:
+	@echo "\\\newcommand{\WhitePaperVersionNumber}{$(REV)}" > version.tex
