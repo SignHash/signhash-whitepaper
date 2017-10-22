@@ -1,0 +1,91 @@
+\documentclass[9pt,oneside]{amsart}
+\usepackage[a4paper,width=170mm,top=18mm,bottom=22mm,includeheadfoot]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+
+\input{version.tex}
+
+\title{
+	SignHash: A Secure File Signing On Ethereum Blockchain \\
+	{\smaller \textbf{Revision (\WhitePaperVersionNumber{})}}
+}
+\author{
+	Jakub Stefanski\\
+	Founder, SignHash\\
+	code@jakubstefanski.com
+}
+\begin{document}
+
+\begin{abstract}
+
+Hashing file contents is an effective way to generate its unique and compact fingerprint.
+It allows to identify the file and reveal any tampering with its contents.
+
+SignHash moves the hashes to the blockchain utilizing its cryptographical security and immutability.
+Furthermore, it provides a set of tools making both signing and verifying files user-friendly and secure.
+
+\end{abstract}
+
+\maketitle
+
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+
+\section{Introduction}
+
+The first part of this paper describes the concept of file hashing, digital signatures and their importance in today's world.
+The second part presents a new signing protocol proposed in SignHash.
+
+\section{Secure file signing}
+
+\subsection{File Hashing}
+
+A hash function maps data of arbitrary size to data of fixed size.
+The returned values are often called hashes.
+
+A hash value has following properties:
+
+\begin{list}{-}{}
+\item has fixed, small size (128, 256, 512 bits)
+\item is deterministic (the same input generates the same output)
+\item resists collisions and preimages
+\end{list}
+
+In other words, a hash function generates a unique value that is always the same for a given file.
+However, it is impossible to find a file that generates the given output. 
+There is also an extremely low probability of finding two files with the same hash.
+
+Therefore a hash value can be used to:
+
+\begin{list}{-}{}
+\item ensure file integrity
+\item verify file authenticity
+\item uniquely identify the file
+\end{list}
+
+A file can be corrupted not only by network errors and software bugs.
+It can be modified in transmission or storage by untrusted party, to include malicious code.
+
+This risk is especially significant in the days of cryptocurrencies.
+Private keys are a frequent target of hackers, so users need to take care of their system security.
+
+\subsection{Existing solutions}
+
+\subsection{Blockchain usage}
+
+\subsection{Use cases}
+
+
+\section{Protocol}
+
+\subsection{Identity verification}
+
+\subsection{Smart contracts}
+
+
+\section{Conclusion}
+
+\end{multicols}
+
+\end{document}
